@@ -35,6 +35,12 @@ git remote -v
 #Large Files: If you have files larger than 100MB, Git will reject them. Use Git LFS for large files.
 git lfs install
 git lfs track "*.largefileextension"
+git lfs track "*.bin"
+git lfs push --all origin main
+git add .
+git commit -m "add lfs"
+
+
 git init
 git add .
 git commit -m "Initial commit with folders"
@@ -184,6 +190,17 @@ git pull origin main
 #Install Git LFS:
 sudo apt install git-lfs
 git lfs install
+
+# Remove the file from the history:
+git filter-branch --force --index-filter \
+"git rm --cached --ignore-unmatch lid.176.bin" \
+--prune-empty --tag-name-filter cat -- --all
+
+
+# Clean up the repository:
+git reflog expire --expire=now --all
+git gc --prune=now --aggressive
+
 
 
 Track the large file:
