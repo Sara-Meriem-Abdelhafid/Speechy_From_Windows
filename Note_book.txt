@@ -15,8 +15,6 @@ pcm.capture {
     }
 }
 
-
-
 sudo nano /etc/asound.conf
 pcm.!default {
     type plug
@@ -37,29 +35,27 @@ pcm.!default {
 
 # create a new repository on the command line
 
-echo "# Speechy_windows" >> README.md
+echo "# Speechy_Source_Code" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/Sara-Meriem-Abdelhafid/Speechy_windows.git
+git remote add origin https://github.com/Sara-Meriem-Abdelhafid/Speechy_Source_Code.git
 git push -u origin main
 
-#…or push an existing repository from the command line
+#To work on github envirment
+https://github.dev/Sara-Meriem-Abdelhafid/Speechy_Source_Code/tree/main/Software/IA
 
-git remote add origin https://github.com/Sara-Meriem-Abdelhafid/Speechy_windows.git
-git branch -M main
-git push -u origin main
 
 
 #If the origin remote is incorrect or outdated, you can update it:
-git remote set-url origin https://github.com/Sara-Meriem-Abdelhafid/Speechy_windows.git
+git remote set-url origin https://github.com/Sara-Meriem-Abdelhafid/Speechy_Source_Code.git
 
 
 #If you want to completely reset the origin, remove it and then add it again:
 git remote remove origin
 
-git remote add origin https://github.com/Sara-Meriem-Abdelhafid/Speechy_windows.git
+git remote add origin https://github.com/Sara-Meriem-Abdelhafid/Speechy_Source_Code.git
 
 
 #Verify the Changes
@@ -74,7 +70,7 @@ git lfs track "*.largefileextension"
 git init
 git add .
 git commit -m "Initial commit with folders"
-git remote add origin https://github.com/Sara-Meriem-Abdelhafid/Speechy_windows.git
+git remote add origin https://github.com/Sara-Meriem-Abdelhafid/Speechy_Source_Code.git
 git push -u origin main
 git push -u origin master
 
