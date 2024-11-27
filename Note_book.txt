@@ -186,6 +186,8 @@ git push origin master --force
 
 git pull origin main  
 
+# How Upload a large file > 100mo :
+###########################################################################################################################
 
 #Install Git LFS:
 sudo apt install git-lfs
@@ -213,6 +215,7 @@ git rm --cached path/to/large-file
 git add .gitattributes text_to_speech/lid.176.bin
 git commit -m "Remove large files"
 git push origin master
+###########################################################################################################################
 
 
 git fetch origin
